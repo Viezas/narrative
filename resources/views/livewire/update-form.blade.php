@@ -1,4 +1,9 @@
 <div class="mb-5">
+    @if(session()->has('status'))
+        <div class="flex justify-center items-center h-12 bg-green-600 w-full mb-5" >
+            <p class="text-2xl text-white">{{ session('status') }}</p>
+        </div>
+    @endif
     <div class="flex justify-center items-center">
         <form action="" method="POST" class="w-full" wire:submit.prevent="update">
             @csrf

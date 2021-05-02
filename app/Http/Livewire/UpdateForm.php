@@ -70,7 +70,6 @@ class UpdateForm extends Component
             auth()->user()->password = $this->password;
         }
 
-        session()->flash('status', "Mise à jour effectué !"); 
-        return redirect('/');
+        session()->flash('status', "Mise à jour effectué !");
     }
 }
